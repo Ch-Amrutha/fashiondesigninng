@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    text-align: center;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);   
+}
+div{
+    display: block;
+    unicode-bidi: isolate;
+}
+body{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+h3{
+    
+    text-align: center;
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sections{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap : 20px;
+}
+h2{
+   
+    text-align: center;
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif; 
+}
+h5{
+    text-align: center;
+    font-size:15px;
+    font-family: 'Times New Roman', Times, serif; 
+}
+footer{
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+footer{
+    display: block;
+    unicode-bidi: isolate;
+}

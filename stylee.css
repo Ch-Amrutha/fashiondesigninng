@@ -1,0 +1,99 @@
+header{
+    background: linear-gradient(to left, #000000, #444444);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+header{
+    display: block;
+    unicode-bidi: isolate;
+    background-image:"https://sophiabellwriter.wixsite.com/edu-brain-academy/post/fashion-designing-course-a-complete-guide-for-beginners-by-edu-brain";
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo on left, links on right */
+    background:linear-gradient(to left, #79f498, #8febee);
+     box-shadow: 0 2px 5px rgba(2, 158, 231, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* space between links */
+}
+
+/* Navigation links */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4081; /* hover color */
+}
+
+/* Search box container */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Input inside search box */
+.search-box input {
+    width: 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* Active search (when icon clicked) */
+.search-box.active input {
+    width: 150px;
+    opacity: 1;
+}
+
+/* Search icon */
+.search-icon {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.search-icon:hover {
+    color: #ff4081;
+}
+
+/* Optional: responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}

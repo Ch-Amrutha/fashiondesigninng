@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fashion Design</title>
+    <link rel="stylesheet" href="stylee.css"/>
+    <link rel="stylesheet" href="content.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+      <h1> Fashion Designing </h1>
+      <p> where creativity meets styles </p>
+   </header>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="fashion-logo.jpg" alt="Fashion Logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Collections</a>
+            <a href="#">Designers</a>
+            <a href="#">Skills</a>
+             <a href="#">Trends</a>
+            <a href="#">Contacts </a>
+            <a href="#">About us </a>
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <span class="search-icon" onclick="toggleSearch()">🔍</span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleSearch() {
+            const box = document.querySelector('.search-box');
+            const input = document.getElementById('searchInput');
+
+            box.classList.toggle('active');
+            input.focus();
+        }
+
+        // Perform search when Enter is pressed
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                alert("You searched for: " + this.value);
+            }
+        });
+    </script>
+      <h1> About  Fashion Designing    </h1>
+    <p>
+        Fashion designing is the art of applying design, aesthetics, and creativity to clothing and accessories. Designers <br>
+        create original garments by combining colors, fabrics, textures, and patterns to express ideas and trends.
+    </p>
+     <h1> Essential Skills </h1>
+    <section id="skills">
+    <div class="sections">
+        <div class="card">
+            <h3>creativity</h3>
+            <p>Ability to create unique designs and visual concepts that stand out.</p>
+        </div>
+        <div class="card">
+            <h3>Sketching</h3>
+            <p>Drawing fashion illustrations to communicate design ideas.</p>
+        </div>
+        <div class="card">
+            <h3>Fabric Knowledge </h3>
+            <p>Understanding textiles, materials, and how they behave.</p>
+        </div>
+    </div>
+</section>
+<section id="trends">
+    <h2> Latest Trends </h2>
+    <div class="sections">
+        <div class="card">
+            <h3>Sustainable Fashion </h3>
+            <p>Eco- friendly materials and ethical production practices.</p>
+        </div>
+        <div class="card">
+            <h3>Minimalist Style </h3>
+            <p>Clean cuts, netural colors, and simple designs.</p>
+        </div>
+        <div class="card">
+            <h3>Bold Patterns  </h3>
+            <p>Vibrant prints and expressive designs.</p>
+        </div>
+    </div>
+</section>
+<section id="images"> 
+    <h2> Our Collections </h2>
+    <div class="sections">
+        <div class="card">
+            <img src="traditionalwear.jpg" />
+            <h3>Traditional wear</h3>
+           
+        </div>
+        <div class="card">
+            <img src="wedding_wear.jpg"/>
+            <h3>Wedding wear </h3>
+        </div>
+        <div class="card">
+            <img src="westrenwear.jpg"/>
+            <h3>Westren Wear </h3> 
+        </div>
+    </div>
+</section>
+<section id="images"> 
+    <h2> Our Collections </h2>
+    <div class="sections">
+        <div class="card">
+            <img src="kidwear.jpg" />
+            <h3>Kids wear</h3>
+           
+        </div>
+        <div class="card">
+            <img src="dailywear.jpg"/>
+            <h3>Daily wear </h3>
+        </div>
+        <div class="card">
+            <img src="partywear.jpg"/>
+            <h3>party Wear </h3> 
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h1> Contacts </h1>
+    <div class="sections">
+        <div class="card">
+            <h5> Email - fashiondesigning@gmail.com </h5>
+            <h5> phone no : +91 9876543211 </h5>
+        </div>
+    </div>
+</section>
+<footer>
+    <p> Fashion Designing 2026. All Rights Reserved. </p>
+</footer>
+</body>
+</html>
