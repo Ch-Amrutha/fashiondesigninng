@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fashion Design</title>
+<style>
+
+header{
+    background: linear-gradient(to left, #000000, #444444);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+header{
+    display: block;
+    unicode-bidi: isolate;
+   
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo on left, links on right */
+    background:linear-gradient(to left, #79f498, #8febee);
+     box-shadow: 0 2px 5px rgba(2, 158, 231, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* space between links */
+}
+
+
+/* Navigation links */
+.nav-links a {
+    text-decoration: none;
+    color:black;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4081; /* hover color */
+}
+
+/* Search box container */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Input inside search box */
+.search-box input {
+    width: 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* Active search (when icon clicked) */
+.search-box.active input {
+    width: 150px;
+    opacity: 1;
+}
+
+/* Search icon */
+.search-icon {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.search-icon:hover {
+    color: #ff4081;
+}
+
+/* Optional: responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+.card img {
+    height:250px;
+    width: 450px;
+    align-items: center;
+
+}
+h1{
+    text-align: center;
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    text-align: center;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);   
+}
+div{
+    display: block;
+    unicode-bidi: isolate;
+}
+body{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+h3{
+    
+    text-align: center;
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sections{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap : 20px;
+}
+h2{
+   
+    text-align: center;
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif; 
+}
+h5{
+    text-align: center;
+    font-size:15px;
+    font-family: 'Times New Roman', Times, serif; 
+}
+footer{
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+footer{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+    </style>
+</head>
+
+<body>
+    
+    <header>
+      <h1> Fashion Designing </h1>
+      <p> where creativity meets styles </p>
+   </header>
+
+    <nav class="navbar">
+        <div class="logo">
+       <img src="https://tse2.mm.bing.net/th/id/OIP.9r0iFmaHvfqNKYgJQG_HBgHaEc?pid=Api&P=0&h=180"/>    
+    </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Collections</a>
+            <a href="#">Designers</a>
+            <a href="#">Skills</a>
+             <a href="#">Trends</a>
+            <a href="#">Contacts </a>
+            <a href="#">About us </a>
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <span class="search-icon" onclick="toggleSearch()">🔍</span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleSearch() {
+            const box = document.querySelector('.search-box');
+            const input = document.getElementById('searchInput');
+
+            box.classList.toggle('active');
+            input.focus();
+        }
+
+        // Perform search when Enter is pressed
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                alert("You searched for: " + this.value);
+            }
+        });
+    </script>
+      <h1> About  Fashion Designing    </h1>
+    <p>
+        Fashion designing is the art of applying design, aesthetics, and creativity to clothing and accessories. Designers <br>
+        create original garments by combining colors, fabrics, textures, and patterns to express ideas and trends.
+    </p>
+     <h1> Essential Skills </h1>
+    <section id="skills">
+    <div class="sections">
+        <div class="card">
+            <h3>creativity</h3>
+            <p>Ability to create unique designs and visual concepts that stand out.</p>
+        </div>
+        <div class="card">
+            <h3>Sketching</h3>
+            <p>Drawing fashion illustrations to communicate design ideas.</p>
+        </div>
+        <div class="card">
+            <h3>Fabric Knowledge </h3>
+            <p>Understanding textiles, materials, and how they behave.</p>
+        </div>
+    </div>
+</section>
+<section id="trends">
+    <h2> Latest Trends </h2>
+    <div class="sections">
+        <div class="card">
+            <h3>Sustainable Fashion </h3>
+            <p>Eco- friendly materials and ethical production practices.</p>
+        </div>
+        <div class="card">
+            <h3>Minimalist Style </h3>
+            <p>Clean cuts, netural colors, and simple designs.</p>
+        </div>
+        <div class="card">
+            <h3>Bold Patterns  </h3>
+            <p>Vibrant prints and expressive designs.</p>
+        </div>
+    </div>
+</section>
+<section id="images"> 
+    <h2> Our Collections </h2>
+    <div class="sections">
+        <div class="card">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2188528733/display_1500/stock-vector-crowd-of-people-from-different-states-parts-or-region-of-india-indian-people-2188528733.jpg" />
+            <h3>Traditional wear</h3>
+           
+        </div>
+        <div class="card">
+            <img src="https://thumbs.dreamstime.com/b/andhrait-wedding-couple-traditional-costume-andhra-pradesh-india-easy-to-edit-vector-illustration-108356675.jpg"/>
+            <h3>Wedding wear </h3>
+        </div>
+        <div class="card">
+            <img src="https://phenav.com/wp-content/uploads/2024/03/6F3A4551-scaled.webp"/>
+            <h3>Westren Wear </h3> 
+        </div>
+    </div>
+</section>
+<section id="images"> 
+    <div class="sections">
+        <div class="card">
+            <img src="https://www.bangaloredesignerboutique.com/wp-content/uploads/2022/07/p7-2.jpg" />
+            <h3>Kids wear</h3>
+           
+        </div>
+        <div class="card">
+            <img src="https://icdn.isrgrajan.com/in/2018/04/Indo-Western-Outfits-with-Lehenga-scaled.jpg"/>
+            <h3>Daily wear </h3>
+        </div>
+        <div class="card">
+            <img src="https://5.imimg.com/data5/ANDROID/Default/2023/8/338223678/WS/HF/ZP/20770002/product-jpeg-1000x1000.jpg"/>
+            <h3>party Wear </h3> 
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h1> Contacts </h1>
+    <div class="sections">
+        <div class="card">
+            <h5> Email - fashiondesigning@gmail.com </h5>
+            <h5> phone no : +91 9876543211 </h5>
+        </div>
+    </div>
+</section>
+<footer>
+    <p> Fashion Designing 2026. All Rights Reserved. </p>
+</footer>
+</body>
+</html>
