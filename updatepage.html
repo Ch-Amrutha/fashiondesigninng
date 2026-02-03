@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashion Designing | New Arrivals</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#333;
+}
+
+/* HEADER (INCREASED HEIGHT) */
+header{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1521334884684-d80222895322");
+    background-size:800px;
+    height: 300px;
+    background-position:center;
+    color:#fff;
+    text-align:center;
+    padding:150px 20px;   /* increased height */
+}
+
+/* NAVBAR */
+.navbar{
+   background:linear-gradient(to left, #f03c81, #5ef6c1);
+    padding:12px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+/* NAV LINKS */
+.nav-links a{
+    text-decoration:none;
+    color:black;
+    margin:0 15px;
+    font-weight:500;
+    font-size:20px;
+}
+
+.nav-links a:hover{
+    color:#ff4081;
+}
+/* SEARCH ICON & INPUT */
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.search-input {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    outline: none;
+}
+
+.search-input.active {
+    width: 180px;
+    opacity: 1;
+}
+
+/* VERTICAL IMAGE CARDS */
+.sections{
+    padding:40px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    max-width:600px;
+    margin:auto;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    overflow:hidden;
+    transition:transform 0.3s ease;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.card img{
+   
+    object-fit:cover;
+}
+
+/* TEXT BELOW IMAGE */
+.card p{
+    margin:0;
+    padding:15px;
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+    background:#f8f8f8;
+}
+
+/* FOOTER */
+footer{
+    
+   background:linear-gradient(to left, #f03c81, #5ef6c1);
+    color:black;
+    font-size:20px;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Collections</a>
+        <a href="#">Contact</a>
+    </div>
+
+   <!-- SEARCH ICON + INPUT WITH DROPDOWN -->
+    <div class="search-container">
+        <span class="search-icon" onclick="toggleSearch()">🔍</span>
+        <input list="wear-types" class="search-input" id="searchInput" placeholder="Type or select a wear...">
+        <datalist id="wear-types">
+            <option value="Traditional Wear">
+            <option value="Wedding Wear">
+            <option value="Western Wear">
+            <option value="Kids Wear">
+            <option value="Daily Wear">
+            <option value="Party Wear">
+        </datalist>
+    </div>
+</nav>
+<script>
+function toggleSearch(){
+    const dropdown = document.getElementById("searchDropdown");
+    dropdown.style.display =
+        dropdown.style.display === "block" ? "none" : "block";
+}
+</script>
+<script>
+function toggleSearch() {
+    const input = document.getElementById("searchInput");
+    input.classList.toggle("active");
+    input.focus();
+}
+
+// Perform search when user presses Enter
+document.getElementById("searchInput").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        const query = this.value.toLowerCase();
+        const cards = document.querySelectorAll(".sections .card");
+        
+        cards.forEach(card => {
+            const text = card.querySelector("p").innerText.toLowerCase();
+            // Show only matching cards
+            if(text.includes(query)){
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+});
+</script>
+<header>
+    <h1>Fashion Designing</h1>
+    <p>Discover our latest arrivals</p>
+    <p> For</p>
+    <p>Kids|Womens|Gents</p>
+    <p>check out our New Arrivals</p>
+</header>
+
+<!-- VERTICAL NEW ARRIVALS -->
+<section class="sections">
+    <div class="card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.RXKHRYrFX-5_gf72UAm0BgHaD6?pid=Api&P=0&h=180" alt="Traditional wear" class="center">
+        <p>Traditional Wear</p>
+    </div>
+
+    <div class="card">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.feZZKAJQ383CzgeLjHB_2gAAAA?pid=Api&P=0&h=180" alt="Wedding wear" class="center">
+        <p>Wedding Wear</p>
+    </div>
+
+    <div class="card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.iRvVcj8R46FdgrzwPVIH9gHaKH?pid=Api&P=0&h=180" alt="Western wear" class="center">
+        <p>Western Wear</p>
+    </div>
+
+    <div class="card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.C7r4l-IF6sTIbhu8WyrpJgHaHa?pid=Api&P=0&h=180" alt="kids wear" class="center">
+        <p>Kids Wear</p>
+    </div>
+
+    <div class="card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.4RhF-q43HzucEPjOdQfuvwHaEK?pid=Api&P=0&h=180" alt="Daily wear" class="center">
+        <p>Daily Wear</p>
+    </div>
+
+    <div class="card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.8Qe-0qaIvd6BhhWUD5JwBwHaMW?pid=Api&P=0&h=180" alt="Part wear" class="center">
+        <p>Party Wear</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Fashion Designing. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
